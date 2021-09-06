@@ -28,4 +28,11 @@ urlpatterns = [
 
     # Example: /blog/archive/today/
     path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
+
+    ## Tag 달기
+    # Example: /blog/tag/
+    path('tag/', views.TagCloudTV.as_view(), name='tag_cloud'),
+
+    # Example: /blog/tag/tagname/
+    path('tag/<str:tag>/', views.TagCloudTV.as_view(), name='tagged_object_list'),
 ]
